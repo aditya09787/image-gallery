@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <p class="eyebrow">Creative collection</p>
+      <h1>Photo Gallery</h1>
+      <p class="subtitle">Explore my favorite moments from nature, travel, and city life.</p>
+    </header>
+
+    <div class="toolbar">
+      <label class="search-box" for="searchInput">
+        <span>Search</span>
+        <input id="searchInput" type="text" placeholder="Search photos..." />
+      </label>
+
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        🌙
+      </button>
+    </div>
+
+    <nav class="filter-bar" aria-label="Image categories">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Nature">Nature</button>
+      <button class="filter-btn" data-filter="Travel">Travel</button>
+      <button class="filter-btn" data-filter="Architecture">Architecture</button>
+      <button class="filter-btn" data-filter="People">People</button>
+    </nav>
+
+    <main class="gallery-wrap">
+      <div id="gallery" class="gallery-grid" aria-live="polite"></div>
+    </main>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close image">×</button>
+      <button class="nav-btn prev-btn" aria-label="Previous image">❮</button>
+
+      <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="Selected gallery image" />
+        <div class="lightbox-info">
+          <span id="lightboxTag">Category</span>
+          <h2 id="lightboxTitle">Image title</h2>
+        </div>
+      </div>
+
+      <button class="nav-btn next-btn" aria-label="Next image">❯</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
